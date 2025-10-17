@@ -1,0 +1,204 @@
+/* ===============================
+   1. VARIÁVEIS GERAIS DO DESIGN SYSTEM
+   =============================== */
+   :root {
+    /* Paleta de Cores */
+    --cor-primaria: #00796b;
+    --cor-secundaria: #26a69a;
+    --cor-destaque: #ffb300;
+    --cor-fundo: #f5f5f5;
+    --cor-texto: #333333;
+    --cor-branca: #ffffff;
+    --cor-neutra-clara: #e0e0e0;
+    --cor-neutra-escura: #424242;
+  
+    /* Tipografia */
+    --fonte-titulo-grande: 2.5rem;
+    --fonte-titulo: 2rem;
+    --fonte-subtitulo: 1.5rem;
+    --fonte-texto: 1rem;
+    --fonte-legenda: 0.875rem;
+  
+    /* Espaçamentos */
+    --esp-1: 8px;
+    --esp-2: 16px;
+    --esp-3: 24px;
+    --esp-4: 32px;
+    --esp-5: 48px;
+    --esp-6: 64px;
+  }
+  
+  /* ===============================
+     2. REGRAS GERAIS (RESET E BASE)
+     =============================== */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+    line-height: 1.6;
+  }
+  
+  /* ===============================
+     3. CABEÇALHO E NAVEGAÇÃO
+     =============================== */
+  header {
+    background-color: var(--cor-primaria);
+    color: var(--cor-branca);
+    padding: var(--esp-2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  header img {
+    width: 120px;
+    border-radius: 6px;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: var(--esp-2);
+  }
+  
+  nav a {
+    color: var(--cor-branca);
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  nav a:hover {
+    color: var(--cor-destaque);
+  }
+  
+  /* ===============================
+     4. CONTEÚDO PRINCIPAL
+     =============================== */
+  main {
+    padding: var(--esp-4);
+  }
+  
+  section {
+    margin-bottom: var(--esp-5);
+  }
+  
+  h1, h2, h3 {
+    color: var(--cor-primaria);
+    margin-bottom: var(--esp-2);
+  }
+  
+  /* ===============================
+     5. CARDS E PROJETOS
+     =============================== */
+  #projetos article {
+    background-color: var(--cor-branca);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: var(--esp-3);
+    margin-bottom: var(--esp-3);
+    transition: 0.3s;
+  }
+  
+  #projetos article:hover {
+    transform: translateY(-4px);
+  }
+  
+  /* ===============================
+     6. BOTÕES E LINKS
+     =============================== */
+  button, input[type="submit"] {
+    background-color: var(--cor-primaria);
+    color: var(--cor-branca);
+    border: none;
+    padding: var(--esp-2) var(--esp-3);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  button:hover, input[type="submit"]:hover {
+    background-color: var(--cor-secundaria);
+  }
+  
+  /* ===============================
+     7. FORMULÁRIOS
+     =============================== */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--esp-2);
+    background-color: var(--cor-branca);
+    padding: var(--esp-3);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  input, select {
+    padding: var(--esp-2);
+    border: 1px solid var(--cor-neutra-clara);
+    border-radius: 5px;
+  }
+  
+  input:focus {
+    border-color: var(--cor-primaria);
+    outline: none;
+    box-shadow: 0 0 5px var(--cor-primaria);
+  }
+  
+  /* ===============================
+     8. RODAPÉ
+     =============================== */
+  footer {
+    background-color: var(--cor-primaria);
+    color: var(--cor-branca);
+    text-align: center;
+    padding: var(--esp-3);
+    margin-top: var(--esp-5);
+  }
+  
+  /* ===============================
+     9. RESPONSIVIDADE (GRID E FLEX)
+     =============================== */
+  @media (max-width: 1200px) {
+    main {
+      padding: var(--esp-3);
+    }
+  }
+  
+  @media (max-width: 992px) {
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    h1 {
+      font-size: var(--fonte-titulo);
+    }
+    section {
+      margin-bottom: var(--esp-3);
+    }
+  }
+  
+  @media (max-width: 360px) {
+    nav a {
+      font-size: var(--fonte-legenda);
+    }
+  }
+  
