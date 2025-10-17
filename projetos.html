@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Conheça nossos projetos sociais e saiba como se tornar um voluntário.">
     <title>Projetos Sociais | ONG Esperança Viva</title>
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
+<script type="module" src="js/app.js"></script>
+
 <body>
     <header>
         <img src="imagens/logo.png" alt="Logo da ONG" width="150">
@@ -55,3 +59,10 @@
     </footer>
 </body>
 </html>
+<script>
+    const path = location.pathname.split('/').pop();
+    const map = { 'index.html': '#/home', 'projetos.html': '#/projetos', 'cadastro.html': '#/cadastro' };
+    const target = map[path] || '#/home';
+    if (!location.hash) location.href = `index.html${target}`;
+  </script>
+  
